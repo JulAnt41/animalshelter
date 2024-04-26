@@ -97,7 +97,7 @@ header .nav ul li a:hover{
 }
 
 .headphoto {
-    background-image: url(../img/headphoto.png);
+    background-image: url(../webp/headphoto.webp);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
