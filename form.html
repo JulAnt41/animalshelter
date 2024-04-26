@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Приют для животных</title>
+</head>
+<body>
+    <header class="flex_row" id="header">
+        <div class="logo">
+            <a href="/index.html"><img src="img/logo.png" alt="логотип"></a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="/index.html">О НАС</a></li>
+                <li><a href="#missions"  onclick="menuOpen()">МИССИИ И ЦЕННОСТИ</a></li>
+                <li><a href="#story"  onclick="menuOpen()">ИСТОРИЯ</a></li>
+                <li><a href="#gallery" onclick="menuOpen()">ГАЛЕРЕЯ</a></li>
+                <li><a href="#team"  onclick="menuOpen()">КОМАНДА</a></li>
+                <li><a href="#support" onclick="menuOpen()">СООБЩЕСТВО ПОДДЕРЖКИ</a></li>
+            </ul>
+        </div>
+        <div class="media">
+            <a href="#"><img src="/img/vk.png" alt="вконтакте"></a>
+            <a href="#"><img src="/img/tg.png" alt="телеграмм"></a>
+            <a href="#"><img src="/img/disc.png" alt="дискорд"></a>
+        </div>
+        <div class="menu-button" onclick="menuOpen()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>ПОМОГИТЕ ПРИЮТУ!</h1>
+        <div class="formpage">
+            <div class="form" id="contactForm">
+                <div class="contform">
+                    <div class="donation_amount">
+                        <label for="amount">Сумма пожертвования</label>
+                        <input type="text" id="amount">
+                    </div>
+                    <div class="personal_info">
+                        <label for="name">ФИО</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="email">
+                        <label for="email">Ваш e-mail</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="payment_method">
+                        <label>Выберите способ оплаты</label>
+                        <div class="methods">
+                            <label for="bspb" class="check">
+                                <input type="radio" id="bspb" checked class="radiobtn" name="check">
+                                <img src="/img/spb.png" alt="бспб">
+                            </label>
+                            <label for="sber" class="check">
+                                <input type="radio" id="sber" class="radiobtn" name="check"> <img src="/img/sber.png" alt="сбер">
+                            </label>
+                            <label for="sbp" class="check">
+                                <input type="radio" id="sbp" class="radiobtn" name="check"><img src="/img/sbp.png" alt="сбп">
+                            </label>
+                        </div>
+                    </div>
+                    <button class="submit" id="submitBtn">ПОМОЧЬ</button>
+                    <div class="terms">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">Я принимаю оферту и условия обработки персональных данных.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <p>Помогите нам обеспечить теплый дом и заботу для наших хвостатых друзей! Ваше пожертвование пойдет на покупку корма, 
+                    лекарств и ухода за животными, которые ждут своего человеческого спасителя. Спасибо, что помогаете делать мир лучше 
+                    для наших пушистых подопечных!</p>
+            </div>
+        </div>
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Ваше пожертвование успешно отправлено! Спасибо!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="end">
+        <div class="container">
+            <div class="menu">
+                <div class="row">
+                    <nav>
+                        <ul>
+                            <li><h3><a href="/index.html">О нас</a></h3></li>
+                            <li class="pcver"><a href="#">Наши миссии и ценности</a></li>
+                            <li class="pcver"><a href="#">История приюта</a></li>
+                            <li class="pcver"><a href="#">Галерея</a></li>
+                            <li class="pcver"><a href="#">Наша команда</a></li>
+                            <li class="pcver"><a href="#">Сообщество поддержки</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><h3><a href="#">Наши питомцы</a></h3></li>
+                            <li class="pcver"><a href="#">Ждут своего человека</a></li>
+                            <li class="pcver"><a href="#">Заполнить анкету попечителя</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><h3><a href="#">Услуги и программы</a></h3></li>
+                            <li class="pcver"><a href="#">Сделайте пожертвование на нужды приюта</a></li>
+                            <li class="pcver"><a href="#">Как взять питомца из приюта?</a></li>
+                            <li class="pcver"><a href="#">Правила посещения</a></li>
+                            <li class="pcver"><a href="#">Лечение</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row">
+                    <nav>
+                        <ul>
+                            <li><h3><a href="#">Новости</a></h3></li>
+                            <li class="pcver"><a href="#">Что говорят о нас в СМИ?</a></li>
+                            <li class="pcver"><a href="#">Ближайшие мероприятия</a></li>
+                            <li class="pcver"><a href="#">Полезные статьи</a></li>
+                            <li class="pcver"><a href="#">История счастливых и домашних</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><h3><a href="#">Контакты</a></h3></li>
+                            <li class="pcver"><a href="#">Как с нами связаться?</a></li>
+                            <li class="pcver"><a href="#">Ответим на Ваши вопросы</a></li>
+                            <li class="pcver"><a href="#">Реквизиты</a></li>
+                            <li class="pcver"><a href="#">Часы работы приюта</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><h3><a href="#">Отзывы</a></h3></li>
+                            <li class="pcver"><a href="#">Отзывы о нашем приюте</a></li>
+                            <li class="pcver"><a href="#">Нам интересно Ваше мнение</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="mediaphone">
+                    <a href="#"><img src="/img/vk.png" alt="вконтакте"></a>
+                    <a href="#"><img src="/img/tg.png" alt="телеграмм"></a>
+                    <a href="#"><img src="/img/disc.png" alt="дискорд"></a>
+                </div>
+            </div>
+
+            
+
+            <div class="line"></div>
+            <div class="down">
+                <div class="landc">
+                    <img src="/img/logoend.png" alt="лого">
+                    <p>© 2024</p>
+                </div>
+                <div class="endmedia">
+                    <a href="#"><img src="/img/vk.png" alt="вконтакте"></a>
+                    <a href="#"><img src="/img/tg.png" alt="телеграмм"></a>
+                    <a href="#"><img src="/img/disc.png" alt="дискорд"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menubtn = document.querySelector('.menu-button');
+        const menu = document.querySelector('.nav ul');
+        function menuOpen() {
+            
+            menu.classList.toggle('show');
+        }
+
+        window.onscroll = function() {stickyHeader()};
+
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        function stickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        var contactForm = document.getElementById("contactForm");
+        var successModal = document.getElementById("successModal");
+        var submitBtn = document.getElementById("submitBtn");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        submitBtn.addEventListener("click", function() {
+            document.getElementById("amount").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("terms").checked = false;
+
+            successModal.style.display = "block";
+        });
+
+        closeBtn.addEventListener("click", function() {
+            successModal.style.display = "none";
+        });
+
+
+    </script>
+
+</body>
+</html>
